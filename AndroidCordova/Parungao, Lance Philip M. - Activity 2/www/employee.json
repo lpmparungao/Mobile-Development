@@ -1,0 +1,53 @@
+
+[
+    {
+        "id":"1",
+        "firstName":"Jurie",
+        "lastName":"Castronuevo",
+        "age":"21",
+        "sex":"F"
+    },
+    {
+        "id":"2",
+        "firstName":"Stephen",
+        "lastName":"Chua",
+        "age":"22",
+        "sex":"M"
+    },
+    {
+        "id":"3",
+        "firstName":"Erica",
+        "lastName":"Delambaca",
+        "age":"21",
+        "sex":"F"
+    },
+    {
+        "id":"4",
+        "firstName":"Kris",
+        "lastName":"Del Prado",
+        "age":"21",
+        "sex":"F"
+    },
+    {
+        "id":"5",
+        "firstName":"Kristelle",
+        "lastName":"Morales",
+        "age":"21",
+        "sex":"F"
+    },
+    {
+        "id":"6",
+        "firstName":"Philip",
+        "lastName":"Parungao",
+        "age":"21",
+        "sex":"M"
+    },
+    {
+        "id":"7",
+        "firstName":"Everly",
+        "lastName":"Torres",
+        "age":"21",
+        "sex":"F"
+    }
+]
+

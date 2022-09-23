@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="msapplication-tap-highlight" content="no">  
+		<meta name="viewport" content="user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width"> 
+        <title>ActivityThree</title>
+    </head>
+    <body>
+        <h1>Open Camera, Take Pictures, Select Pictures from the Picture Library, and Get Thumbnails</h1>
+        <button id="cameraApp">Open Camera</button>
+        <button id="openFilePicker">Select From Files</button>
+        <div style="width:300px; height: 400px;">
+            <img id="myImage" style="max-width:100%; max-height: 100;">
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript"> 
+            document.getElementById("cameraApp").addEventListener("click", cameraApp);
+            document.getElementById("openFilePicker").addEventListener("click", openFilePicker);
+            function cameraApp(){
+                navigator.camera.getPicture(onSuccess, onFail, {
+                    quality:100,
+                    saveToPhotoAlbum: true,
+                    destinationType:Camera.DestinationType.DATA_URL
+                });
+                function onSuccess(imageData){
+                    var image = document.getElementById('myImage');
+                    image.src = "data:image/jpeg;base64," + imageData;
+                }
+                function onFail(message) {
+                alert('Failed because: ' + message);
+                }
+            }
+            function openFilePicker() {
+                navigator.camera.getPicture(onSuccess, onFail, {
+                    quality:100,
+                    sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                    destinationType:Camera.DestinationType.DATA_URL
+                });
+
+                function onSuccess(imageData){
+                    var image = document.getElementById('myImage');
+                    image.src = "data:image/jpeg;base64," + imageData;
+                }
+                function onFail(message) {
+                alert('Failed because: ' + message);
+                }
+            }
+        </script>
+    </body>
+</html>
